@@ -4,7 +4,8 @@ var exphbs = require('express-handlebars');
 
 // Standard Express.js code Modules and Obejcts
 const express = require('express')
-const app = express()
+const app = express();
+const PORT = 3000;
 
 //Database (Eventually)
 
@@ -24,13 +25,13 @@ app.get('/', (req, res) => {
 
 //Mock Item Stuff
 let items = [
-    {title: "Great Item", itemTitle: "Strickers"},
-    {title: "Awesome Service", itemTitle: "Badass Haricut"},
+    { title : "Great Item", itemTitle: "Strickers" },
+    { title : "Awesome Service", itemTitle: "Badass Haricut" },
 ]
 
 
 
 //Server Start
-app.listen(3000, () => {
-  console.log('App listening on port 3000!')
+app.listen(PORT, () => {
+  console.log(`App listening on port ${PORT}!`)
 })
