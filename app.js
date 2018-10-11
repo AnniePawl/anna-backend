@@ -6,7 +6,18 @@ var exphbs = require('express-handlebars');
 const express = require('express')
 const app = express()
 
-//Database (Eventually)
+//Database
+const mongoose = require('mongoose');
+mongoose.connect('mongodb://localhost/anna-backend',
+{useNewUrlParser: true});
+
+
+const Review = mongoose.model('Item', {
+  item: String,
+  itemTitle: String
+});
+
+
 
 //Import Routes (eventually)
 //cont items = require ('./controllers/items')
@@ -18,16 +29,21 @@ app.set('view engine', 'handlebars');
 
 // INDEX
 app.get('/', (req, res) => {
-  res.render('items-index', { items: items });
+  Item.find()
+    .then(items => {
+      res.render('items-index', { items: items });
+    })
+    .catch(err => {
+      console.log(err);
+    })
 })
 //Middleware (eventually)
 
 //Mock Item Stuff
-let items = [
-    {title: "Great Item", itemTitle: "Strickers"},
-    {title: "Awesome Service", itemTitle: "Badass Haricut"},
-]
-
+// let items = [
+//     {title: "Great Item", itemTitle: "Strickers"},
+//     {title: "Awesome Service", itemTitle: "Badass Haricut"},
+// ]
 
 
 //Server Start
