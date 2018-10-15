@@ -15,18 +15,31 @@
       <label for="itemTitle">Name of Item</label><br>
       <input type="text" name="itemTitle" />
     </p>
-  </fieldset>
+
 
   <!-- DESCRIPTION -->
-  <p>
-    <label for="description-text">Description</label><br>
-    <textarea id="description-text" name="description" rows="10" /></textarea>
-  </p>
-</fieldset>
+      <p>
+        <label for="description-text">Description</label><br>
+        <textarea id="description-text" name="description" rows="10" /></textarea>
+      </p>
+
+
+<!-- Item Condition -->
+<div class="form-group">
+    <label for="rating-stars">Item Condition</label></br>
+    <select class="form-group" data-style="btn-info" name="rating">
+        <option id="rating-stars" type="text" value="&#9733;">&#9733;</option>
+        <option id="rating-stars" type="text" value="&#9733;&#9733;">&#9733;&#9733;</option>
+        <option id="rating-stars" type="text" value="&#9733;&#9733;&#9733;">&#9733;&#9733;&#9733;</option>
+        <option id="rating-stars" type="text" value="&#9733;&#9733;&#9733;&#9733;">&#9733;&#9733;&#9733;&#9733;</option>
+        <option id="rating-stars" type="text" value="&#9733;&#9733;&#9733;&#9733;&#9733;">&#9733;&#9733;&#9733;&#9733;&#9733;</option>
+    </select>
+</div>
+
 
   <!-- BUTTON -->
   <p>
     <button type="submit">Save</button>
   </p>
-
+  </fieldset>
 </form>

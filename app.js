@@ -15,7 +15,8 @@ mongoose.connect('mongodb://localhost/anna-backend',
 const Item = mongoose.model('Item', {
   item: String,
   description: String,
-  itemTitle: String
+  itemTitle: String,
+  rating: String,
 });
 
 //Middleware
