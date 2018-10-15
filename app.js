@@ -29,10 +29,13 @@ app.use(methodOverride('_method'));
 // Handlebars
 app.engine('handlebars', exphbs({defaultLayout: 'main'}));
 app.set('view engine', 'handlebars');
+app.use(express.static('public'));
 
 //Import Routes + Set up
 const items = require('./controllers/items')(app, Item, Comment);
 const comments = require('./controllers/comments')(app, Comment);
+
+module.exports = app;
 
 //Server Start
 app.listen(3000, () => {
