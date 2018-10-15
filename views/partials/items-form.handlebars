@@ -1,0 +1,39 @@
+<fieldset>
+  <legend>Edit Item Listing</legend>
+
+<!-- Listing Title-->
+  <p>
+    <label for="title">Listing Title</label><br>
+    <input type="text" name="title" value="{{item.title}}" />
+  </p>
+
+<!-- Item Title-->
+  <p>
+    <label for="itemTitle">Name of Item</label><br>
+    <input type="text" name="itemTitle" value="{{item.itemTitle}}"/>
+  </p>
+
+<!-- DESCRIPTION -->
+    <p>
+      <label for="description-text">Item Description</label><br>
+      <textarea id="description-text" name="description" rows="10" />{{item.description}}</textarea>
+    </p>
+
+
+<!-- Item Condition -->
+<div class="form-group">
+  <label for="rating-stars">Item Condition</label></br>
+  <select class="form-group" data-style="btn-info" name="rating">
+      <option id="rating-stars" type="text" value="&#9733;">&#9733;</option>
+      <option id="rating-stars" type="text" value="&#9733;&#9733;">&#9733;&#9733;</option>
+      <option id="rating-stars" type="text" value="&#9733;&#9733;&#9733;">&#9733;&#9733;&#9733;</option>
+      <option id="rating-stars" type="text" value="&#9733;&#9733;&#9733;&#9733;">&#9733;&#9733;&#9733;&#9733;</option>
+      <option id="rating-stars" type="text" value="&#9733;&#9733;&#9733;&#9733;&#9733;">&#9733;&#9733;&#9733;&#9733;&#9733;</option>
+  </select>
+</div>
+
+<!-- BUTTON -->
+<p>
+  <button type="submit">Save</button>
+</p>
+</fieldset>

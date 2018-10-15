@@ -5,6 +5,7 @@ var exphbs = require('express-handlebars');
 const express = require('express')
 const app = express();
 const bodyParser = require('body-parser');
+const methodOverride = require('method-override');
 
 //Database
 const mongoose = require('mongoose');
@@ -21,6 +22,7 @@ const Item = mongoose.model('Item', {
 
 //Middleware
 app.use(bodyParser.urlencoded({ extended: true }));
+app.use(methodOverride('_method'));
 
 
 //Import Routes (eventually)
@@ -65,6 +67,27 @@ console.log(req.body)
   }).catch((err) => {
     console.log(err.message)
   })
+})
+
+//EDIT
+app.get('/items/:id/edit', (req, res) => {
+  Item.findById(req.params.id)
+  .then(item => {
+    res.render('items-edit', {item: item});
+}).catch(err => {
+    console.log(err)
+})
+})
+
+//UPDATE
+app.put('/items/:id', (req, res) => {
+  Item.findByIdAndUpdate(req.params.id, req.body)
+    .then(item => {
+      res.redirect(`/items/${item._id}`)
+    })
+    .catch(err => {
+      console.log(err.message)
+    })
 })
 
 //Server Start
