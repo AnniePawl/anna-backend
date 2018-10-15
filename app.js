@@ -90,6 +90,16 @@ app.put('/items/:id', (req, res) => {
     })
 })
 
+// DELETE
+app.delete('/items/:id', function (req, res) {
+  console.log("DELETE Item Listing")
+  Item.findByIdAndRemove(req.params.id).then((item) => {
+    res.redirect('/');
+  }).catch((err) => {
+    console.log(err.message);
+  })
+})
+
 //Server Start
 app.listen(3000, () => {
   console.log('App listening on port 3000!')

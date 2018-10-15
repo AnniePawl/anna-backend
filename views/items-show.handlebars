@@ -7,8 +7,11 @@
     <h2>{{item.itemTitle}}</h2>
     <p>{{item.description}}</p>
     <p>{{item.rating}}</p>
-
     <p><a href="/items/{{item._id}}/edit">Edit Listing</a></p>
+
+<!-- Delete button -->
+    <p><form method="POST" action="/items/{{item._id}}?_method=DELETE">
+    <button type="submit">Delete</button>
 
 <!-- </div>
 </div> -->
