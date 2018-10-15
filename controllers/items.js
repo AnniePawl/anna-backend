@@ -71,4 +71,16 @@ app.delete('/items/:id', function (req, res) {
     console.log(err.message);
   })
 })
+
+
+// DELETE Comments
+app.delete('/items/comments/:id', function (req, res) {
+  console.log("DELETE comment")
+  Comment.findByIdAndRemove(req.params.id).then((comment) => {
+    res.redirect(`/items/${comment.itemId}`);
+  }).catch((err) => {
+    console.log(err.message);
+  })
+})
+
 }
