@@ -1,9 +1,10 @@
 // Initializing Handlebars.js in appp
 var exphbs = require('express-handlebars');
 
-// Standard Express.js code Modules and Obejcts
+// Standard Express.js Modules and Obejcts
 const express = require('express')
-const app = express()
+const app = express();
+const bodyParser = require('body-parser');
 
 //Database
 const mongoose = require('mongoose');
@@ -13,8 +14,12 @@ mongoose.connect('mongodb://localhost/anna-backend',
 
 const Item = mongoose.model('Item', {
   item: String,
+  description: String,
   itemTitle: String
 });
+
+//Middleware
+app.use(bodyParser.urlencoded({ extended: true }));
 
 
 //Import Routes (eventually)
@@ -40,8 +45,15 @@ app.get('/items/new', (req, res) => {
   res.render('items-new', {});
 })
 
-//Middleware (eventually)
-
+//CREATE
+app.post('/items', (req, res) => {
+  Item.create(req.body).then((item) => {
+    console.log(review);
+    res.redirect('/');
+  }).catch((err) => {
+    console.log(err.message);
+  })
+})
 
 //Server Start
 app.listen(3000, () => {

@@ -3,16 +3,26 @@
 <form method="POST" action="/items">
   <fieldset>
     <legend>Add New Item</legend>
-    <!-- TITLE -->
+
+<!-- Listing Title-->
     <p>
-      <label for="title">Title</label><br>
+      <label for="title">Listing Title</label><br>
       <input type="text" name="title" />
     </p>
+
+<!-- Item Title-->
     <p>
       <label for="itemTitle">Name of Item</label><br>
       <input type="text" name="itemTitle" />
     </p>
   </fieldset>
+
+  <!-- DESCRIPTION -->
+  <p>
+    <label for="description-text">Description</label><br>
+    <textarea id="description-text" name="description" rows="10" /></textarea>
+  </p>
+</fieldset>
 
   <!-- BUTTON -->
   <p>
