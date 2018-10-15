@@ -13,7 +13,7 @@ mongoose.connect('mongodb://localhost/anna-backend',
 
 
 const Item = mongoose.model('Item', {
-  item: String,
+  title: String,
   description: String,
   itemTitle: String,
   rating: String,
@@ -46,13 +46,24 @@ app.get('/items/new', (req, res) => {
   res.render('items-new', {});
 })
 
-//CREATE
-app.post('/items', (req, res) => {
-  Item.create(req.body).then((item) => {
-    console.log(review);
-    res.redirect('/');
+// SHOW
+app.get('/items/:id', (req, res) => {
+  Item.findById(req.params.id).then((item) => {
+    res.render('items-show', { item: item })
   }).catch((err) => {
     console.log(err.message);
+  })
+})
+
+//CREATE
+app.post('/items', (req, res) => {
+console.log(req.body)
+  Item.create(req.body).then((item) => {
+    console.log(item)
+    res.redirect(`/items/${item._id}`)
+    // Redirect to items/:id
+  }).catch((err) => {
+    console.log(err.message)
   })
 })
 

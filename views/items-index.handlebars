@@ -3,7 +3,11 @@
 
 <a href="/items/new">Add New Item</a>
 
+<div class="row">
 {{#each items}}
-    <h2>{{this.title}}</h2>
+<div class="col-sm-3">
+<h2><a href="/items/{{this._id}}">{{this.title}}</a><h2>
     <small>{{this.itemTitle}}</small>
+</div>
 {{/each}}
+</div>
