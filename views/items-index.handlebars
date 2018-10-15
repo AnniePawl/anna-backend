@@ -1,13 +1,58 @@
 <!-- items-index -->
-<h1>Available Items</h1>
+<div class="container">
 
-<a href="/items/new">Add New Item</a>
+    <h1>AVAILABLE ITEMS</h1>
+    <br>
+    <a class="new-items"href="/items/new">Add New Item</a>
+    <br>
+    <br>
+    <div class="row">
+    {{#each items}}
+    <div class="col-sm-3">
+    <h2><a href="/items/{{this._id}}">{{this.title}}</a><h2>
+        <small>{{this.itemTitle}}</small>
+    </div>
+    {{/each}}
+    </div>
 
-<div class="row">
-{{#each items}}
-<div class="col-sm-3">
-<h2><a href="/items/{{this._id}}">{{this.title}}</a><h2>
-    <small>{{this.itemTitle}}</small>
 </div>
-{{/each}}
-</div>
+
+<style>
+
+.container {
+    text-align: center;
+    border: 2px solid black;
+    border-radius: 30px;
+    margin: 20px;
+}
+
+button:active {
+    transform: translateY(4px);
+}
+
+a {
+    text-decoration: none;
+}
+.new-items{
+    border: 2px black;
+    background-color: tomato;
+    text-decoration: none;
+    color: black;
+    border-radius: 15px;
+    box-shadow: 3px 7px #888888;
+    font-size: 20px;
+    padding: 20px;
+    margin: 15px;
+    width: 60%;
+}
+h1{
+    text-align: center;
+}
+
+.item-title {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+
+</style>

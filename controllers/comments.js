@@ -15,13 +15,3 @@ module.exports = function (app, Comment) {
       })
     })
 }
-
-// DELETE
-app.delete('/items/comments/:id', function (req, res) {
-  console.log("DELETE comment")
-  Comment.findByIdAndRemove(req.params.id).then((comment) => {
-    res.redirect(`/items/${comment.itemId}`);
-  }).catch((err) => {
-    console.log(err.message);
-  })
-})
