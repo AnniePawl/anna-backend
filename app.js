@@ -15,12 +15,8 @@ mongoose.connect('mongodb://localhost/anna-backend2',
 {useNewUrlParser: true});
 
 
-const Item = mongoose.model('Item', {
-  title: String,
-  description: String,
-  itemTitle: String,
-  rating: String,
-});
+const Item = require('./models/item');
+const Comment = require('./models/comment')
 
 //Middleware
 app.use(bodyParser.urlencoded({ extended: true }));
@@ -35,8 +31,8 @@ app.engine('handlebars', exphbs({defaultLayout: 'main'}));
 app.set('view engine', 'handlebars');
 
 //Import Routes + Set up
-const items = require('./controllers/items')(app, Item);
-
+const items = require('./controllers/items')(app, Item, Comment);
+const comments = require('./controllers/comments')(app, Comment);
 
 //Server Start
 app.listen(3000, () => {

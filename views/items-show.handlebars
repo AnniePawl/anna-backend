@@ -1,7 +1,7 @@
 <a href="/">Back to Home</a>
 
-<!-- <div class="row">
-<div class="col-sm-6 col-sm-offset-3"> -->
+<div class="row">
+<div class="col-sm-6 col-sm-offset-3">
 
     <h1>{{item.title}}</h1>
     <h2>{{item.itemTitle}}</h2>
@@ -12,6 +12,17 @@
 <!-- Delete button -->
     <p><form method="POST" action="/items/{{item._id}}?_method=DELETE">
     <button type="submit">Delete</button>
+</form>
+</p>
+    <hr>
 
-<!-- </div>
-</div> -->
+<!-- Comment form -->
+    {{> comment-form}}
+
+<!-- Show Comments -->
+    {{#each comments}}
+     {{> comment}}
+    {{/each}}
+
+</div>
+</div>

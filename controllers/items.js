@@ -1,5 +1,5 @@
 
-module.exports = function(app, Item) {
+module.exports = function(app, Item, Comment) {
 
 // INDEX
 app.get('/', (req, res) => {
@@ -20,7 +20,10 @@ app.get('/items/new', (req, res) => {
 // SHOW
 app.get('/items/:id', (req, res) => {
   Item.findById(req.params.id).then((item) => {
-    res.render('items-show', { item: item })
+      Comment.find({itemId: req.params.id}).then(comments => {
+          res.render('items-show', { item: item, comments: comments })
+      })
+
   }).catch((err) => {
     console.log(err.message);
   })
