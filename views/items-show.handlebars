@@ -1,19 +1,16 @@
-<a href="/">Back to Home</a>
 
 <div class="row">
 <div class="col-sm-6 col-sm-offset-3">
-
     <h1>{{item.title}}</h1>
     <h2>{{item.itemTitle}}</h2>
     <p>{{item.description}}</p>
     <p>{{item.rating}}</p>
     <p><a href="/items/{{item._id}}/edit">Edit Listing</a></p>
-
 <!-- Delete button -->
     <p><form method="POST" action="/items/{{item._id}}?_method=DELETE">
-    <button type="submit">Delete</button>
-</form>
-</p>
+    <button class="btn btn-primary" type="submit">Delete</button>
+    </form>
+    </p>
     <hr>
 
 <!-- Comment form -->
