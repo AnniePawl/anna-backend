@@ -8,11 +8,9 @@ const bodyParser = require('body-parser');
 const methodOverride = require('method-override');
 const port = process.env.PORT || 3000;
 
-
-
 //Database
 const mongoose = require('mongoose');
-mongoose.connect('mongodb://localhost/anna-backend2',
+mongoose.connect(process.env.MONGODB_URI ||'mongodb://localhost:27017/anna-backend2',
 {useNewUrlParser: true});
 
 
