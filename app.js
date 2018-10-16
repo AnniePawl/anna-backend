@@ -6,6 +6,7 @@ const express = require('express')
 const app = express();
 const bodyParser = require('body-parser');
 const methodOverride = require('method-override');
+const port = process.env.PORT || 3000;
 
 
 
@@ -38,6 +39,6 @@ const comments = require('./controllers/comments')(app, Comment);
 module.exports = app;
 
 //Server Start
-app.listen(3000, () => {
-  console.log('App listening on port 3000!')
+app.listen(port, () => {
+	console.log(`App listening on port ${port}`)
 })
