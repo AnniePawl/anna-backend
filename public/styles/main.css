@@ -9,7 +9,7 @@
 
 .hand-container {
     width: 100%;
-    
+
 
 }
 .mini-container {
@@ -34,10 +34,7 @@
 
 /*HANDS*/
 
-.longhand {
-    height: 550px;
-    width: 320px;
-}
+
  h1{
      text-align: center;
      font-family: 'Roboto', sans-serif;
@@ -51,67 +48,47 @@
  }
 
 
-.hand2{
-    transform: rotate(250deg);
-
-
+/* Hot Pink Hand Right */
+.cls-37:hover {
+    fill: #5171F9 !important;
 }
-
-.hand3{
-    transform: rotate(20deg);
-}
-
-.hand4
-{
-    transform: rotate(180deg);
-}
-
-.hand5
-
-/* Hand 1 */
-.cls-1-1{
-    fill:hotpink;
-}
-
-.cls-1-1:hover {
-    fill: tomato !important;
-}
-
-
-
-/* Hand 2 */
-.cls-1-2{
-    fill:hotpink; }
-
-.cls-1-2:hover {
+/* Light blue Hand Top  */
+.cls-2:hover {
     fill: yellow !important;
 }
-
-/* Hand 3 */
-.cls-1-3{
-    fill:#ED9C17; }
-
-.cls-1-3:hover {
-    fill: #1765ED !important;
+/*Red Hand Top  */
+.cls-13:hover {
+    fill: orange !important;
 }
-
-/* Hand 4 */
-.cls-1-4{
-    fill:#B4E40B ; }
-
-.cls-1-4:hover {
-    fill: #E40B53!important;
+/*Light Purple Top  */
+.cls-26:hover {
+    fill:#FCBFFB  !important;
 }
-
-/* Hand 5 */
-
-.cls-1-5{
-    fill:#950BE4   ; }
-
-.cls-1-5:hover {
-    fill: #0BC2E4!important;
+/*Tiny top pink  */
+.cls-15:hover {
+    fill: orange !important;
 }
-
-.cls-3:hover {
-    fill: yellow !important;
+/* Dark Blue bottom left */
+.cls-30:hover {
+    fill: #F151F9 !important;
+}
+/*Bottom Neon Green  */
+.cls-11:hover {
+    fill: #FAFF2C  !important;
+}
+/*Dark Purple Bottom right*/
+.cls-8:hover {
+    fill: #FAFF2C   !important;
+}
+/* Golden bottom left */
+.cls-22:hover {
+    fill: #41C0FF   !important;
+}
+/*Bottom Organe left  */
+.cls-19:hover {
+    fill: #2CFF9F !important;
+}
+/*Top Yellow  */
+.cls-16:hover {
+    fill: #F81E00  !important;
 }
