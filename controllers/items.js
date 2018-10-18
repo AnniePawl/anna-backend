@@ -5,7 +5,7 @@ module.exports = function(app, Item, Comment) {
 app.get('/', (req, res) => {
   Item.find()
     .then(items => {
-      res.render('items-index', { items: items });
+      res.render('index', { items: items });
     })
     .catch(err => {
       console.log(err);
