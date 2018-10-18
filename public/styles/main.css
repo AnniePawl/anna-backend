@@ -1,17 +1,9 @@
+
 .navbar {
     width: 100%;
-}
-.container {
-    text-align: center;
-    display: flex;
-    flex-direction: column;
+    background-color:  #434343 ;
 }
 
-.hand-container {
-    width: 100%;
-
-
-}
 .mini-container {
     width: 100%;
     display:flex;
@@ -32,9 +24,6 @@
 }
 
 
-/*HANDS*/
-
-
  h1{
      text-align: center;
      font-family: 'Roboto', sans-serif;
@@ -48,47 +37,55 @@
  }
 
 
+/*HANDS*/
+.cls-36.cls-34:hover{
+    transform: scale(1.3);
+}
+/* transform: scale(1.3);
+.grow { transition: all .2s ease-in-out; }
+.grow:hover { transform: scale(1.1); } */
+
 /* Hot Pink Hand Right */
-.cls-37:hover {
+.cls-31:hover {
     fill: #5171F9 !important;
 }
 /* Light blue Hand Top  */
-.cls-2:hover {
+.cls-1:hover {
     fill: yellow !important;
 }
 /*Red Hand Top  */
-.cls-13:hover {
+.cls-12:hover {
     fill: orange !important;
 }
 /*Light Purple Top  */
-.cls-26:hover {
+.cls-25:hover {
     fill:#FCBFFB  !important;
 }
 /*Tiny top pink  */
-.cls-15:hover {
+.cls-14:hover {
     fill: orange !important;
 }
 /* Dark Blue bottom left */
-.cls-30:hover {
+.cls-29:hover {
     fill: #F151F9 !important;
 }
 /*Bottom Neon Green  */
-.cls-11:hover {
+.cls-10:hover {
     fill: #FAFF2C  !important;
 }
 /*Dark Purple Bottom right*/
-.cls-8:hover {
+.cls-7:hover {
     fill: #FAFF2C   !important;
 }
 /* Golden bottom left */
-.cls-22:hover {
+.cls-21:hover {
     fill: #41C0FF   !important;
 }
 /*Bottom Organe left  */
-.cls-19:hover {
+.cls-18:hover {
     fill: #2CFF9F !important;
 }
 /*Top Yellow  */
-.cls-16:hover {
+.cls-15:hover {
     fill: #F81E00  !important;
 }
